@@ -1,10 +1,20 @@
 ---
-import VideoFrames from '../../components/VideoFrames.astro';
 import Layout from '../../layouts/Layout.astro';
 
+import VideoFrames from '../../components/VideoFrames.astro';
+import Lenisgsap from '../../components/Lenisgsap.astro';
 ---
 
 <Layout>
 	<h1>Index en Ingles</h1>
-	<VideoFrames />
+	<div class="h-dvh flex flex-row gap-5 text-center py-5">
+		<div class="basis-1/4 bg-slate-400">01</div>
+		<div class="basis-1/4 bg-slate-400">02</div>
+		<div class="basis-1/2 bg-slate-400">03</div>
+	</div>	<div class="h-dvh flex flex-row gap-5 text-center py-5">
+		<div class="basis-1/4 bg-slate-400">01</div>
+		<div class="basis-1/4 bg-slate-400"><Lenisgsap /></div>
+		<div class="basis-1/2 bg-slate-400">03</div>
+	</div>
+	
 </Layout>

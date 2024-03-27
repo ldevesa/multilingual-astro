@@ -1,0 +1,84 @@
+---
+
+---
+
+        <div class="animated-element">
+            <h2>Animate me</h2>
+            <p>This is a simple card with a title and a description. It will animate as we scroll</p>
+        </div>
+
+
+
+
+<style>
+
+    .animated-element {
+        width: 300px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        background-color: #9400df;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        position: relative;
+        left: -400px;
+    }
+    h2 {
+        margin: 0;
+        padding: 0;
+    }
+    p {
+        font-size: .85em;
+        line-height: 1.4em;
+        margin-bottom: 0;
+    }
+</style>
+
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+    import gsap from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    import Lenis from '@studio-freight/lenis';
+
+    // Gsap
+    let tl = gsap.timeline();
+
+    tl.to('.animated-element', {
+        x: 400,
+    });
+
+    // smooth scroll
+    const lenis = new Lenis();
+
+    lenis.on('scroll', (e) => {
+    console.log(e);
+    });
+
+    lenis.on('scroll', ScrollTrigger.update);
+
+    gsap.ticker.add((time)=>{
+    lenis.raf(time * 1000)
+    });
+
+    gsap.ticker.lagSmoothing(0);
+
+    /* const animatedElements = document.querySelectorAll('.animated-element');
+
+    animatedElements.forEach((element) => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: element,
+                start: 'top 80%',
+                end: 'top 20%',
+                toggleActions: 'play none none reverse',
+            },
+        });
+
+        tl.from(element, {
+            opacity: 0,
+            y: 50,
+            duration: 0.5,
+        });
+    }); */
+
+</script>

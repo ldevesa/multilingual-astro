@@ -1,6 +1,6 @@
 ---
 import { getLangFromUrl } from '../i18n/utils';
-import NavBar from '../components/NavBar.astro';
+import NavBar1 from '../components/NavBar1.astro';
 
 const lang = getLangFromUrl(Astro.url);
 
@@ -15,7 +15,7 @@ const lang = getLangFromUrl(Astro.url);
 		<title>Astro</title>
 	</head>
 	<body>
-        <NavBar />
+        <NavBar1 />
 		<main class="p-16">
 			<slot />
 		</main>
