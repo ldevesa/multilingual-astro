@@ -16,7 +16,9 @@ const lang = getLangFromUrl(Astro.url);
 	</head>
 	<body>
         <NavBar />
-        <slot />
+		<main class="p-16">
+			<slot />
+		</main>
         <footer>
             
         </footer>
