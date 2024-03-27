@@ -2,6 +2,7 @@
 import { getLangFromUrl } from '../i18n/utils';
 import NavBar1 from '../components/NavBar1.astro';
 
+
 const lang = getLangFromUrl(Astro.url);
 
 ---
@@ -13,6 +14,7 @@ const lang = getLangFromUrl(Astro.url);
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
+		
 	</head>
 	<body>
         <NavBar1 />
@@ -45,3 +47,4 @@ const lang = getLangFromUrl(Astro.url);
 	}
 
 </style>
+
